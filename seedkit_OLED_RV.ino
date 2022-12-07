@@ -122,9 +122,9 @@ void oledInteractive(String content) {
         Oled.println(content);
         delay(1000);
         Oled.clearDisplay();
-        Oled.setCursor(0,0);
+        Oled.setCursor(0,2);
         Oled.println("Stiskni knoflik");
-        Oled.setCursor(0,1);
+        Oled.setCursor(0,3);
         Oled.println("pro opakovani:");
         
       // pokud bude stisknuto, přeruší chod a začne znovu
