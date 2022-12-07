@@ -81,7 +81,6 @@ while (true) {
       // cyklus FOR je odlišný od cyklu WHILE tím, že u něj známe přesné parametry
       // víme totiž na jaké hodnotě začne, na jaké skončí a jak bude posloupně postupovat
       // (zda bude inkrementovat (zvyšovat hodnotu), nebo dekrementovat (snižovat hodnotu)
-      // a nebo něco jiného (např. sčítat, atd.)
       // zde zavádíme začátek na deklarované proměnné ton = 0,
       // druhý zápis určuje konec cyklu (jakmile bude ton = 8),
       // poslední zápis ton++ říká, že inkrementujeme
