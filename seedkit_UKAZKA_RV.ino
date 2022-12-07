@@ -74,8 +74,9 @@ void setup() {
 void melodik() {
 
 while (true) {
-  switch (digitalRead(buttonpin)) {
-    case HIGH:
+
+  // pokud bude stav tlačítka stisklý, provede úkon co zadáme
+  if (digitalRead(buttonpin) == HIGH) {
 
       // cyklus FOR
       // cyklus FOR je odlišný od cyklu WHILE tím, že u něj známe přesné parametry
@@ -121,13 +122,8 @@ void LEDshow() {
   // pokud není přerušen
   while (true) {
 
-    // switch znamená "přepínač", který vyhodnocuje stavy
-    // zde vyhodnocuje stav digitalRead(buttonpin), neboli
-    // stav tlačítka (HIGH/LOW - nestisklé/stisklé)
-    switch (digitalRead(buttonpin)) {
-
-      // pokud není stisklé, jede cyklus
-      case HIGH:
+    // pokud bude stav tlačítka stisklý, provede úkon co zadáme
+    if (digitalRead(buttonpin) == HIGH) {
 
         // pošle na výstup LED diody HIGH (tj. logická 1, +5V)
         digitalWrite(ledpin, HIGH);
@@ -226,14 +222,9 @@ void oledInteractive(String content) {
   // pokud není přerušen
   while (true) {
 
-    // switch znamená "přepínač", který vyhodnocuje stavy
-    // zde vyhodnocuje stav digitalRead(buttonpin), neboli
-    // stav tlačítka (HIGH/LOW - nestisklé/stisklé)
-    switch (digitalRead(buttonpin)) {
-
-      // pokud bude nestisklé (HIGH), provede
-      // to, co jsme funkci napsali (tiskne zadaný parametr)
-      case HIGH:
+    // pokud bude stav tlačítka stisklý, provede úkon co zadáme
+    if (digitalRead(buttonpin) == HIGH) {
+      
         // smaže obsah
         Oled.clearDisplay();
         Oled.setFont(u8x8_font_chroma48medium8_r);
