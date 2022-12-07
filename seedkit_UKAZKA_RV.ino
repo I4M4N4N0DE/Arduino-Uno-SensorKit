@@ -153,11 +153,11 @@ void LEDshow() {
 
         Oled.clearDisplay();
         Oled.setFont(u8x8_font_chroma48medium8_r);
-        Oled.setCursor(0,0);
-        Oled.println("Stiskni knoflik");
-        Oled.setCursor(0,1);
-        Oled.println("pro melodii,");
         Oled.setCursor(0,2);
+        Oled.println("Stiskni knoflik");
+        Oled.setCursor(0,3);
+        Oled.println("pro melodii,");
+        Oled.setCursor(0,4);
         Oled.println("nebo resetuj.");
         delay(1000);
         
